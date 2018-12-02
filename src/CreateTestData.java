@@ -2,6 +2,14 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * This file creates sample data to test {@link CommonWordsFinderImpl.java}}
+ * 
+ * @author komal
+ * @since 01.12.2018
+ *
+ */
+
 public class CreateTestData {
 	
 	private static final String FILENAME = "/home/komal/eclipse-workspace/AirtelXLabsKomal/file9";

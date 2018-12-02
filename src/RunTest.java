@@ -5,12 +5,22 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * This file give file paths for 3 test files and run {@link CommonWordsFinder.java}
+ * 
+ * 
+ * @author komal
+ * @since 01/12/2018
+ *
+ */
+
 public class RunTest {
+	
+	private static final Logger LOGGER = Logger.getLogger(RunTest.class.getName());
 	
 	public static void main(String[] args) {
 		Date start = Calendar.getInstance().getTime();
-		ProcessFile processFile = new ProcessFileImpl();
-		final Logger LOGGER = Logger.getLogger(RunTest.class.getName());
+		CommonWordsFinder processFile = new CommonWordsFinderImpl();
 		
 //		String f1 = "/home/komal/eclipse-workspace/AirtelXLabsKomal/file1";
 //		String f2 = "/home/komal/eclipse-workspace/AirtelXLabsKomal/file2";
@@ -26,7 +36,7 @@ public class RunTest {
 		paths.add(f3);
 		
 		try {
-			List<String> result = processFile.readFile(paths);
+			List<String> result = processFile.commonWordsProcessor(paths);
 			if (!result.isEmpty()) {
 				System.out.println("result: "+result);
 			} else {
